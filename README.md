@@ -1,4 +1,6 @@
 # docker-compose
+# from https://github.com/mediagis/nominatim-docker
+
 git config --global user.email "feykmeel@yahoo.com"
 git config --global user.name "feykmeelyahoo"
 
