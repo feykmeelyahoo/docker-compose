@@ -1,11 +1,11 @@
 git config --global user.email "feykmeel@yahoo.com"
 git config --global user.name "feykmeelyahoo"
 
-docker node update --label-add w1 worker1
-docker node update --label-add w2 worker2
-docker node update --label-add m1 manager1
-docker node update --label-add m2 manager2
-docker node update --label-add m3 manager3
+docker node update --label-add type=w1 worker1
+docker node update --label-add type=w2 worker2
+docker node update --label-add type=m1 manager1
+docker node update --label-add type=m2 manager2
+docker node update --label-add type=m3 manager3
 
 
 
