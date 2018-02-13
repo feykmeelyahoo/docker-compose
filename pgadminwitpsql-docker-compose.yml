@@ -6,16 +6,18 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
+#    volumes:
+#      - ./pgadmin:/var/lib/pgadmin:ro
     ports:
       - "5432:5432"
     restart: always
   pgadmin:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: user@domain.com
-      PGADMIN_DEFAULT_PASSWORD: password
+    image: fenglc/pgadmin4
+#    volumes:
+#       - ./pgadmin:/root/.pgadmin
     ports:
-      - "8080:80"
+      - "5050:5050"
+
 #  Gerek Yok  links:
 #  Gerek Yok    - postgres:postgres
     restart: always
