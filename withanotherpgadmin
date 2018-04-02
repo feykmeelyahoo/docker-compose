@@ -1,0 +1,22 @@
+version: '3.6'
+
+services:
+  postgres-test:
+    image: postgres
+    # restart: always
+    environment:
+      POSTGRES_PASSWORD: 1234
+    volumes:     
+      - "./dbdata:/var/lib/postgresql/data"
+  pgadmin4-test:
+    image: meedan/pgadmin
+    # restart: always
+    ports:
+      - 8080:5050
+    environment:
+      PGADMIN_USER: user@domain.com
+      PGADMIN_PASSWORD: SuperSecret
+    links: 
+      - postgres-test:db
+    volumes:     
+      - "./pgadmin:/home/pgadmin/.pgadmin"
